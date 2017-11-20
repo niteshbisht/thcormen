@@ -1,5 +1,7 @@
 package app.algo.basic.sort;
 
+import java.util.Arrays;
+
 import org.junit.BeforeClass;
 import org.junit.Test;
 
@@ -14,16 +16,17 @@ public class HeapSortTest {
 	
 	@Test
 	public void testMaxHeapify() {
-		int[] arr = {4,1,3,2,16,9,10,14,8,7};
-		//{16,14,10,9,8,7,4,3,2,1}; 
-			//{1 2 3 4 7 8 9 10 14 16};
-		for(int p:arr) {
-			System.out.print(p+",");
+		int[] data=new int[10000000];
+		for(int i=9999999;i>=0;i--) {
+			data[i]=i;
 		}
-		System.out.println();
-		heapSort.heapSort(arr);
-		for(int p:arr) {
-			System.out.print(p+",");
-		}
+		int[] copyOf = Arrays.copyOf(data, data.length);
+		
+		long t1 = System.currentTimeMillis();
+		heapSort.heapSort(data);
+		System.out.println(System.currentTimeMillis()-t1);
+		long t2 = System.currentTimeMillis();
+		Arrays.sort(copyOf);
+		System.out.println(System.currentTimeMillis()-t2);
 	}
 }
