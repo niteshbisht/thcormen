@@ -2,7 +2,7 @@ package app.algo.basic.search;
 
 public class BinarySearch {
 
-	int binarySearch(int arr[], int l, int r, int search) {
+	int binarySearch(int[] arr, int l, int r, int search) {
 
 		if (r >= 1) {
 			int mid = (l + r) / 2;

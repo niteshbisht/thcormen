@@ -2,7 +2,7 @@ package app.algo.basic.sort;
 
 public class QuickSort {
 
-	public void quickSort(int arr[],int p,int r) {
+	public void quickSort(int[] arr,int p,int r) {
 		if(p<r) {
 			int q=partition(arr, p, r);
 			quickSort(arr, p, q-1);
@@ -10,7 +10,7 @@ public class QuickSort {
 		}
 	}
 	
-	public int partition(int arr[], int p, int r) {
+	public int partition(int[] arr, int p, int r) {
 		int x = arr[r];
 		int i = p - 1;
 		for (int j = p; j < r ; j++) {
@@ -24,7 +24,7 @@ public class QuickSort {
 		return i + 1;
 	}
 
-	void exchange(int arr[], int i, int j) {
+	void exchange(int[] arr, int i, int j) {
 		int temp = arr[i];
 		arr[i] = arr[j];
 		arr[j] = temp;

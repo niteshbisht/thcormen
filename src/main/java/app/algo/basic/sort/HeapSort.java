@@ -37,14 +37,14 @@ public class HeapSort {
 		
 	}
 
-	public void buildMaxHeap(int arr[]) {
+	public void buildMaxHeap(int[] arr) {
 		int size = arr.length-1;
 		for (int j = (size / 2)-1; j >= 0; j--) {
 			maxHeapify(arr,size,j);
 		}
 	}
 
-	public void heapSort(int arr[]) {
+	public void heapSort(int[] arr) {
 		buildMaxHeap(arr);
 		//printArray(arr);
 		for (int j = arr.length-1; j > 0; j--) {
@@ -54,13 +54,13 @@ public class HeapSort {
 		}
 	}
 
-	void exchange(int arr[], int i, int j) {
+	void exchange(int[] arr, int i, int j) {
 		int temp = arr[i];
 		arr[i] = arr[j];
 		arr[j] = temp;
 	}
 	
-	void printArray(int arr[]) {
+	void printArray(int[] arr) {
 		for(int p:arr) {
 			System.out.print(p+",");
 		}

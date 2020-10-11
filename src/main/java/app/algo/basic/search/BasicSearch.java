@@ -5,7 +5,7 @@ import java.util.List;
 
 public class BasicSearch {
 
-	Integer[] getIdxOfElements(int[] searchArray, int item) {
+	Integer[] getIdxOfElements(int[] searchArray, @SuppressWarnings("SameParameterValue") int item) {
 		List<Integer> positionArray = new ArrayList<>();
 		for (int i = 0; i < searchArray.length; i++) {
 			if (item == searchArray[i]) {
