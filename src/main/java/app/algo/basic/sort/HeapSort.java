@@ -2,7 +2,6 @@ package app.algo.basic.sort;
 
 public class HeapSort {
 
-
 	int getParent(int idx) {
 		return Math.floorDiv(idx, 2);
 	}
@@ -16,16 +15,15 @@ public class HeapSort {
 	}
 
 	void maxHeapify(int[] arr, int size ,int i) {
-		
 		int left = getLeftChild(i);
 		int right = getRightChild(i);
 		int largest = i;
 		
 		if ((left < size) && (arr[left] > arr[i])) {
 			largest = left;
-		} else
+		} else {
 			largest = i;
-
+		}
 		if ((right < size) && (arr[right] > arr[largest])) {
 			largest = right;
 		}
