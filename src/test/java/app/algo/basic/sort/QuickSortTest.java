@@ -17,16 +17,15 @@ public class QuickSortTest {
 	@Test
 	public void testQuickSort() {
 		int p = 0;
-		int[] arr = new int[4];
-		arr[0] = 4;
+		int[] arr = new int[5];
+		arr[0] = 2;
 		arr[1] = 3;
-		arr[2] = 2;
-		arr[3] = 1;
-//		for(int i=0;i<4;i++) {
-//			arr[i]=i;
-//		}
-		int r = arr.length-1;
-		quickSort.quickSort(arr, p, r);
-		ArrayPrinter.printArray(arr);
+		arr[2] = 1;
+		arr[3] = 9;
+		arr[4] = 5;
+		long start = System.nanoTime();
+		quickSort.quickSort(arr, p, arr.length-1);
+		System.out.println(System.nanoTime() - start);
+		// ArrayPrinter.printArray(arr);
 	}
 }
