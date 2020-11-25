@@ -17,7 +17,7 @@ public class BinTreeInOrderTraversal {
             if (node.left != null) {
                 helper(node.left, res);
             }
-            res.add(node.value);
+            res.add(node.val);
             if (node.right != null) {
                 helper(node.right, res);
             }
@@ -35,7 +35,7 @@ public class BinTreeInOrderTraversal {
                 curr = curr.left;
             }
             curr = stack.pop();
-            res.add(curr.value);
+            res.add(curr.val);
             curr = curr.right;
         }
         return res;
@@ -53,15 +53,37 @@ public class BinTreeInOrderTraversal {
                 curr = curr.left;
             } else {
                 curr = stack.pop();
-                res.add(curr.value);
+                res.add(curr.val);
                 curr = curr.right;
             }
         }
         return res;
     }
 
-    List<Integer> inorderUsingMorrisTraversal(TreeNode node) {
-
-        return null;
+    /**
+     * Threaded Binary Tree Data Structure
+     * @param root
+     * @return
+     */
+    List<Integer> inorderUsingMorrisTraversal(TreeNode root) {
+        List < Integer > res = new ArrayList < > ();
+        TreeNode curr = root;
+        TreeNode pre;
+        while (curr != null) {
+            if (curr.left == null) {
+                res.add(curr.val);
+                curr = curr.right; // move to next right node
+            } else { // has a left subtree
+                pre = curr.left;
+                while (pre.right != null) { // find rightmost
+                    pre = pre.right;
+                }
+                pre.right = curr; // put cur after the pre node
+                TreeNode temp = curr; // store cur node
+                curr = curr.left; // move cur to the top of the new tree
+                temp.left = null; // original cur left be null, avoid infinite loops
+            }
+        }
+        return res;
     }
 }
