@@ -32,3 +32,8 @@ dependencies {
             'commons-io:commons-io:2.4',
             'org.jbehave:jbehave-core:3.8'
 }
+
+test {
+    useJUnit()
+    maxHeapSize = '1G'
+}
