@@ -1,5 +1,7 @@
 package app.algo.basic.bintree;
 
+import com.sun.source.tree.Tree;
+
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
@@ -23,14 +25,15 @@ public class BinTreeInOrderTraversal {
             }
         }
     }
+
     // dual loop
     List<Integer> inorderTraversalUsingStack(TreeNode root) {
         List<Integer> res = new ArrayList<>();
         LinkedList<TreeNode> stack = new LinkedList<>();
         stack.push(root);
         TreeNode curr = root;
-        while (curr!=null || !stack.isEmpty()) {
-            while (curr!=null) {
+        while (curr != null || !stack.isEmpty()) {
+            while (curr != null) {
                 stack.push(curr);
                 curr = curr.left;
             }
@@ -47,8 +50,8 @@ public class BinTreeInOrderTraversal {
         LinkedList<TreeNode> stack = new LinkedList<>();
         stack.push(root);
         TreeNode curr = root;
-        while (curr!=null || !stack.isEmpty()) {
-            if (curr!=null) {
+        while (curr != null || !stack.isEmpty()) {
+            if (curr != null) {
                 stack.push(curr);
                 curr = curr.left;
             } else {
@@ -62,11 +65,12 @@ public class BinTreeInOrderTraversal {
 
     /**
      * Threaded Binary Tree Data Structure
+     *
      * @param root
      * @return
      */
-    List<Integer> inorderUsingMorrisTraversal(TreeNode root) {
-        List < Integer > res = new ArrayList < > ();
+    static List<Integer> inorderUsingMorrisTraversal(TreeNode root) {
+        List<Integer> res = new ArrayList<>();
         TreeNode curr = root;
         TreeNode pre;
         while (curr != null) {
@@ -85,5 +89,28 @@ public class BinTreeInOrderTraversal {
             }
         }
         return res;
+    }
+
+    public static void main(String[] args) {
+        TreeNode one = createT(1);
+        TreeNode two = createT(2);
+        TreeNode three = createT(3);
+        TreeNode four = createT(4);
+        TreeNode five = createT(5);
+        TreeNode six = createT(6);
+
+        one.left = two;
+        one.right = three;
+
+        two.left = four;
+        two.right = five;
+
+        three.left = six;
+
+        System.out.println(inorderUsingMorrisTraversal(one));
+    }
+
+    static TreeNode createT(int val) {
+        return new TreeNode(val, null, null);
     }
 }
