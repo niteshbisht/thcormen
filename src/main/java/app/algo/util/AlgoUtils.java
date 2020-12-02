@@ -6,4 +6,26 @@ public class AlgoUtils {
         arr[x] = arr[y];
         arr[y] = temp;
     }
+
+    public static TreeNode createTree() {
+        TreeNode one = createT(1);
+        TreeNode two = createT(2);
+        TreeNode three = createT(3);
+        TreeNode four = createT(4);
+        TreeNode five = createT(5);
+        TreeNode six = createT(6);
+
+        one.left = two;
+        one.right = three;
+
+        two.left = four;
+        two.right = five;
+
+        three.left = six;
+        return one;
+    }
+
+    static TreeNode createT(int val) {
+        return new TreeNode(val, null, null);
+    }
 }

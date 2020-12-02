@@ -5,7 +5,7 @@ import java.util.List;
 
 public class GenerateParenthesisClosure {
     public static List<String> generateParenthesis(int n) {
-        List<String> ans = new ArrayList();
+        List<String> ans = new ArrayList<>();
         if (n == 0) {
             ans.add("");
         } else {

@@ -1,6 +1,6 @@
 package app.algo.basic.bintree;
 
-import com.sun.source.tree.Tree;
+import app.algo.util.TreeNode;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -16,12 +16,12 @@ public class BinTreeInOrderTraversal {
 
     void helper(TreeNode node, List<Integer> res) {
         if (node != null) {
-            if (node.left != null) {
-                helper(node.left, res);
+            if (node.getLeft() != null) {
+                helper(node.getLeft(), res);
             }
-            res.add(node.val);
-            if (node.right != null) {
-                helper(node.right, res);
+            res.add(node.getVal());
+            if (node.getRight() != null) {
+                helper(node.getRight(), res);
             }
         }
     }
@@ -35,11 +35,11 @@ public class BinTreeInOrderTraversal {
         while (curr != null || !stack.isEmpty()) {
             while (curr != null) {
                 stack.push(curr);
-                curr = curr.left;
+                curr = curr.getLeft();
             }
             curr = stack.pop();
-            res.add(curr.val);
-            curr = curr.right;
+            res.add(curr.getVal());
+            curr = curr.getRight();
         }
         return res;
     }
@@ -53,11 +53,11 @@ public class BinTreeInOrderTraversal {
         while (curr != null || !stack.isEmpty()) {
             if (curr != null) {
                 stack.push(curr);
-                curr = curr.left;
+                curr = curr.getLeft();
             } else {
                 curr = stack.pop();
-                res.add(curr.val);
-                curr = curr.right;
+                res.add(curr.getVal());
+                curr = curr.getRight();
             }
         }
         return res;
@@ -74,18 +74,18 @@ public class BinTreeInOrderTraversal {
         TreeNode curr = root;
         TreeNode pre;
         while (curr != null) {
-            if (curr.left == null) {
-                res.add(curr.val);
-                curr = curr.right; // move to next right node
+            if (curr.getLeft() == null) {
+                res.add(curr.getVal());
+                curr = curr.getRight(); // move to next right node
             } else { // has a left subtree
-                pre = curr.left;
-                while (pre.right != null) { // find rightmost
-                    pre = pre.right;
+                pre = curr.getLeft();
+                while (pre.getRight() != null) { // find rightmost
+                    pre = pre.getRight();
                 }
-                pre.right = curr; // put cur after the pre node
+                pre.setRight(curr); // put cur after the pre node
                 TreeNode temp = curr; // store cur node
-                curr = curr.left; // move cur to the top of the new tree
-                temp.left = null; // original cur left be null, avoid infinite loops
+                curr = curr.getLeft(); // move cur to the top of the new tree
+                temp.setLeft(null); // original cur left be null, avoid infinite loops
             }
         }
         return res;
@@ -99,13 +99,13 @@ public class BinTreeInOrderTraversal {
         TreeNode five = createT(5);
         TreeNode six = createT(6);
 
-        one.left = two;
-        one.right = three;
+        one.setLeft(two);
+        one.setRight(three);
 
-        two.left = four;
-        two.right = five;
+        two.setLeft(four);
+        two.setRight(five);
 
-        three.left = six;
+        three.setLeft(six);
 
         System.out.println(inorderUsingMorrisTraversal(one));
     }
