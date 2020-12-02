@@ -31,7 +31,7 @@ public class LevelOrderTraversal {
       level++;
     }
 
-    return null;
+    return result;
   }
 
   static List<List<Integer>> solve(TreeNode treeNode) {
