@@ -5,6 +5,12 @@ import java.util.Arrays;
 import java.util.List;
 
 public class SkyLineProblem {
+
+  public static void main(String[] args) {
+    int[][] buildings = {{2, 9, 10}, {3, 7, 15}, {5, 12, 12}, {15, 20, 10}, {19, 24, 8}};
+    SkyLineProblem skp = new SkyLineProblem();
+    skp.getSkyline(buildings);
+  }
   /**
    * Divide-and-conquer algorithm to solve skyline problem, which is similar with the merge sort
    * algorithm.

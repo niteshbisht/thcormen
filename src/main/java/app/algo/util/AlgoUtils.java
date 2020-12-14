@@ -28,4 +28,25 @@ public class AlgoUtils {
     static TreeNode createT(int val) {
         return new TreeNode(val, null, null);
     }
+
+    public static ListNode createListNodeFromArray(int[] arr) {
+        ListNode start = null;
+        ListNode prev = null;
+        for (int i : arr) {
+            if(start==null) {
+                start = createNode(i);
+                prev = start;
+                continue;
+            }
+            if(prev!=null) {
+                prev.next = createNode(i);
+                prev = prev.next;
+            }
+        }
+        return start;
+    }
+
+    static ListNode createNode(int val) {
+        return new ListNode(val);
+    }
 }
