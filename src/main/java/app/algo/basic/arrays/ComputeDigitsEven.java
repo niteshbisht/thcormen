@@ -1,6 +1,8 @@
 package app.algo.basic.arrays;
 
 public class ComputeDigitsEven {
+  public static void main(String[] args) {}
+
   public int findNumbers(int[] nums) {
     int ctr = 0;
     for (int i : nums) {
@@ -10,9 +12,5 @@ public class ComputeDigitsEven {
       }
     }
     return ctr;
-  }
-
-  public static void main(String[] args) {
-
   }
 }

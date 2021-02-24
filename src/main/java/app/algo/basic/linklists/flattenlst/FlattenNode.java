@@ -4,6 +4,8 @@ import java.util.ArrayDeque;
 import java.util.Deque;
 
 public class FlattenNode {
+  Node tail;
+
   public static Node flatten(Node head) {
     if (head == null) return null;
     Node pseudoHead = new Node(-1, null, head, null);
@@ -27,6 +29,8 @@ public class FlattenNode {
     return pseudoHead.next;
   }
 
+  public static void main(String[] args) {}
+
   Node flattenNodeRecursive(Node root) {
     if (root == null) return null;
     Node pseudoNode = new Node(-1, null, root, null);
@@ -47,8 +51,6 @@ public class FlattenNode {
     return flattenDfs(tail, tempNextNode);
   }
 
-  Node tail;
-
   Node flattenDfsV2(Node head) {
     if (head == null) return null;
     head.prev = tail;
@@ -59,6 +61,4 @@ public class FlattenNode {
     tail.next = flattenDfsV2(nextNode);
     return head;
   }
-
-  public static void main(String[] args) {}
 }

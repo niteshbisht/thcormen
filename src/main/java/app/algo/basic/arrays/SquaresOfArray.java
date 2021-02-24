@@ -33,7 +33,7 @@ public class SquaresOfArray {
   }
 
   public static void main(String[] args) {
-    int[] arrp = {-4,-1,0,3,10};
+    int[] arrp = {-4, -1, 0, 3, 10};
     System.out.println(sortedSquares(arrp));
   }
 }
