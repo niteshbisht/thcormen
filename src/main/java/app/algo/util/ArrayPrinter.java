@@ -1,10 +1,10 @@
 package app.algo.util;
 
 public class ArrayPrinter {
-  public static void printArray(int[] arr) {
-    for (int p : arr) {
-      System.out.print(p + ",");
+    public static void printArray(int[] arr) {
+        for (int p : arr) {
+            System.out.print(p + ",");
+        }
+        System.out.println();
     }
-    System.out.println();
-  }
 }
