@@ -4,7 +4,6 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class ClimbStairs {
-    static int igl = 0;
 
     int climb(int n) {
         return climbStairs(0, n);
@@ -14,8 +13,6 @@ public class ClimbStairs {
         if (i > n) return 0;
         if (i == n) return 1;
         int val = climbStairs(i + 1, n) + climbStairs(i + 2, n);
-        igl++;
-        System.out.println("igl = " + igl + "  val = " + val);
         return val;
     }
 
