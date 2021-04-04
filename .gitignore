@@ -23,3 +23,13 @@ hs_err_pid*
 /.gradle/**
 /.idea/**
 /build/**
+/.gradle/
+/build/
+/.apt_generated/
+/.apt_generated_tests/
+/.classpath
+/bin/.gitignore
+/.project
+/.settings/org.eclipse.buildship.core.prefs
+/.settings/org.eclipse.jdt.apt.core.prefs
+/.settings/org.eclipse.jdt.core.prefs
