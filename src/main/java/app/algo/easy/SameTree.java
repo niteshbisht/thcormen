@@ -33,25 +33,6 @@ public class SameTree {
         boolean left = isSameTree(p.left, q.left);
         boolean right = isSameTree(p.right, q.right);
         return left && right;
-//        TreeNode n1 = p;
-//        TreeNode n2 = q;
-//        while (n1 != null & n2 != null) {
-//            if (n1.val != n2.val) return false;
-//            else {
-//                if (n1.left != null && n2.left != null) {
-//                    n1 = n1.left;
-//                    n2 = n2.left;
-//                    continue;
-//                }
-//
-//                if (n1.right != null && n2.right != null) {
-//                    n1 = n1.right;
-//                    n2 = n2.right;
-//                    continue;
-//                }
-//            }
-//        }
-//        return true;
     }
 
     public static void main(String[] args) {
