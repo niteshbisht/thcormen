@@ -5,13 +5,6 @@ import app.algo.util.TreeNode;
 
 /** leetcode problem no 23/easy */
 public class CreateHeightBalancedBst {
-  public static TreeNode arrayToBST(int[] nums) {
-    TreeNode node = new TreeNode(nums[0], null, null);
-    for (int i = 1; i < nums.length; i++) {
-      insertRecord(node, nums[i]);
-    }
-    return node;
-  }
 
   static TreeNode createBSTFromSortedArray(int[] nums) {
     return sortedArrToBst(0, nums.length - 1, nums);
@@ -24,19 +17,6 @@ public class CreateHeightBalancedBst {
         new TreeNode(
             nums[mid], sortedArrToBst(start, mid - 1, nums), sortedArrToBst(mid + 1, end, nums));
     return node;
-  }
-
-  static TreeNode insertRecord(TreeNode root, int val) {
-    if (root == null) {
-      root = new TreeNode(val, null, null);
-      return root;
-    }
-    if (root.val > val) {
-      root.left = insertRecord(root.left, val);
-    } else if (root.val < val) {
-      root.right = insertRecord(root.right, val);
-    }
-    return root;
   }
 
   public static void main(String[] args) {
