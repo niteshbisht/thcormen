@@ -17,23 +17,23 @@ idea.module {
 }
 
 dependencies {
-    compile 'org.slf4j:slf4j-api:1.7.5',
+    implementation 'org.slf4j:slf4j-api:1.7.5',
             'org.slf4j:slf4j-simple:1.7.5',
             'commons-lang:commons-lang:2.6'
-    compileOnly 'org.projectlombok:lombok:1.18.14'
+    implementation 'org.projectlombok:lombok:1.18.14'
     annotationProcessor 'org.projectlombok:lombok:1.18.14'
 
-    testCompileOnly 'org.projectlombok:lombok:1.18.14'
+    testImplementation 'org.projectlombok:lombok:1.18.14'
     testAnnotationProcessor 'org.projectlombok:lombok:1.18.14'
 
-    testCompile 'junit:junit:4.11',
+    testImplementation 'junit:junit:4.11',
             'org.mockito:mockito-core:1.9.5',
             'org.assertj:assertj-core:1.6.1',
             'commons-io:commons-io:2.4',
             'org.jbehave:jbehave-core:3.8'
 }
 
-test {
-    useJUnit()
-    maxHeapSize = '1G'
-}
+//test {
+//    useJUnit()
+//    maxHeapSize = '1G'
+//}

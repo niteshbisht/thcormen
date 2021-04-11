@@ -4,7 +4,7 @@ import junit.framework.TestCase;
 import org.junit.After;
 import org.junit.Before;
 
-public class CheckParenthesisTest extends TestCase {
+public class CheckParenthesisTest {
 
   @Before
   public void setUp() throws Exception {}
