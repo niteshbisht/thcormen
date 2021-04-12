@@ -30,7 +30,6 @@ public class LevelOrderTraversal {
       // go to next level
       level++;
     }
-
     return result;
   }
 

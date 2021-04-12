@@ -5,12 +5,6 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class ClimbStairs {
 
-  public static void main(String[] args) {
-    ClimbStairs cl = new ClimbStairs();
-    // System.out.println(cl.climb(3));
-    log.info("value {}", cl.climbStairsDynamicProgramming(3));
-  }
-
   int climb(int n) {
     return climbStairs(0, n);
   }
@@ -45,7 +39,7 @@ public class ClimbStairs {
     return dp[n];
   }
 
-  public int climbStairsFibn(int n) {
+  public static int climbStairsFibn(int n) {
     if (n == 1) return 1;
     int first = 1, second = 2;
     for (int i = 3; i <= n; i++) {
@@ -54,5 +48,9 @@ public class ClimbStairs {
       second = third;
     }
     return second;
+  }
+
+  public static void main(String[] args) {
+    System.out.println(climbStairsFibn(6));
   }
 }
