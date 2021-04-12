@@ -13,10 +13,8 @@ public class CreateHeightBalancedBst {
   static TreeNode sortedArrToBst(int start, int end, int[] nums) {
     if (start > end) return null;
     int mid = (start + end) / 2;
-    TreeNode node =
-        new TreeNode(
-            nums[mid], sortedArrToBst(start, mid - 1, nums), sortedArrToBst(mid + 1, end, nums));
-    return node;
+    return new TreeNode(
+        nums[mid], sortedArrToBst(start, mid - 1, nums), sortedArrToBst(mid + 1, end, nums));
   }
 
   public static void main(String[] args) {

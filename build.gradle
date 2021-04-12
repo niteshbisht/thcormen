@@ -8,7 +8,6 @@ version = '1.0-SNAPSHOT'
 group = 'app.algo'
 
 repositories {
-    jcenter()
     mavenCentral()
 }
 
@@ -32,6 +31,7 @@ dependencies {
             'commons-io:commons-io:2.4',
             'org.jbehave:jbehave-core:3.8'
 }
+
 
 //test {
 //    useJUnit()
