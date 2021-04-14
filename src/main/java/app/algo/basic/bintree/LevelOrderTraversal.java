@@ -14,7 +14,7 @@ public class LevelOrderTraversal {
 
   static List<List<Integer>> levelOrderUsingQueue(TreeNode treeNode) {
     List<List<Integer>> result = new ArrayList<>();
-    if(treeNode==null) return result;
+    if (treeNode == null) return result;
     Queue<TreeNode> queue = new LinkedList<>();
     queue.add(treeNode);
     int level = 0;
@@ -24,13 +24,12 @@ public class LevelOrderTraversal {
       for (int i = 0; i < qlen; i++) {
         TreeNode node = queue.remove();
         result.get(level).add(node.getVal());
-        if(node.getLeft()!=null) queue.add(node.getLeft());
-        if(node.getRight()!=null) queue.add(node.getRight());
+        if (node.getLeft() != null) queue.add(node.getLeft());
+        if (node.getRight() != null) queue.add(node.getRight());
       }
       // go to next level
       level++;
     }
-
     return result;
   }
 

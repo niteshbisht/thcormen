@@ -1,6 +1,11 @@
 package app.algo.basic.recursion;
 
 public class MaxRectangleArea {
+  public static void main(String[] args) {
+    MaxRectangleArea mra = new MaxRectangleArea();
+    System.out.println(mra.largestRectangleArea(new int[] {4, 3, 5, 6, 8}));
+  }
+
   public int calculateArea(int[] heights, int start, int end) {
     if (start > end) return 0;
     int minIndex = start;
@@ -14,10 +19,5 @@ public class MaxRectangleArea {
 
   public int largestRectangleArea(int[] heights) {
     return calculateArea(heights, 0, heights.length - 1);
-  }
-
-  public static void main(String[] args) {
-      MaxRectangleArea mra = new MaxRectangleArea();
-    System.out.println(mra.largestRectangleArea(new int[]{4,3,5,6,8}));
   }
 }

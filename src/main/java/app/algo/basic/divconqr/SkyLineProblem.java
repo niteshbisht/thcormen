@@ -11,6 +11,7 @@ public class SkyLineProblem {
     SkyLineProblem skp = new SkyLineProblem();
     skp.getSkyline(buildings);
   }
+
   /**
    * Divide-and-conquer algorithm to solve skyline problem, which is similar with the merge sort
    * algorithm.

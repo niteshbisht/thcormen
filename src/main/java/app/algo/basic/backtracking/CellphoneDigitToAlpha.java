@@ -6,8 +6,9 @@ import java.util.List;
 import java.util.Map;
 
 public class CellphoneDigitToAlpha {
-  private static Map<String, String> digMap = new HashMap<>();
   static List<String> output = new ArrayList<String>();
+  private static Map<String, String> digMap = new HashMap<>();
+
   static {
     digMap.put("2", "abc");
     digMap.put("3", "def");
@@ -21,20 +22,20 @@ public class CellphoneDigitToAlpha {
 
   static void backTrack(String combination, String nextDigits) {
     //  base case
-    if(nextDigits.length()==0) {
+    if (nextDigits.length() == 0) {
       output.add(combination);
     } else {
       String digit = nextDigits.substring(0, 1);
       String letters = digMap.get(digit);
       for (int i = 0; i < letters.length(); i++) {
-        String letter = letters.substring(i,i+1);
-        backTrack(combination+letter, nextDigits.substring(1));
+        String letter = letters.substring(i, i + 1);
+        backTrack(combination + letter, nextDigits.substring(1));
       }
     }
   }
 
   static List<String> solve(String digits) {
-    if(digits.length()!=0) {
+    if (digits.length() != 0) {
       backTrack("", digits);
     }
     return output;

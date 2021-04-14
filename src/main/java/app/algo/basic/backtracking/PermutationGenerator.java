@@ -4,9 +4,16 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Iterator;
 
-import static app.algo.util.AlgoUtils.*;
+import static app.algo.util.AlgoUtils.swap;
 
 public class PermutationGenerator {
+
+  public static void main(String[] args) {
+    PermutationGenerator pg = new PermutationGenerator();
+    // pg.permutation1(new int[] {1, 2, 3, 4, 5}, 5);
+    ArrayList<ArrayList<Integer>> result = pg.permutation2(new int[] {1, 2, 3, 4, 5}, 5);
+    System.out.println(result.toArray());
+  }
 
   public void permutation1(int[] a, int n) {
     if (n == 1) {
@@ -39,12 +46,5 @@ public class PermutationGenerator {
       }
     }
     return gen;
-  }
-
-  public static void main(String[] args) {
-    PermutationGenerator pg = new PermutationGenerator();
-    //pg.permutation1(new int[] {1, 2, 3, 4, 5}, 5);
-    ArrayList<ArrayList<Integer>> result = pg.permutation2(new int[]{1, 2, 3, 4, 5}, 5);
-    System.out.println(result.toArray());
   }
 }

@@ -1,6 +1,9 @@
 package app.algo.basic.divconqr;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.TreeMap;
 
 /**
  * Date 01/07/2016
@@ -13,25 +16,11 @@ import java.util.*;
  */
 public class SkylineDrawing {
 
-  /** Represents either start or end of building */
-  static class BuildingPoint implements Comparable<BuildingPoint> {
-    int x;
-    boolean isStart;
-    int height;
-
-    @Override
-    public int compareTo(BuildingPoint o) {
-      // first compare by x.
-      // If they are same then use this logic
-      // if two starts are compared then higher height building should be picked first
-      // if two ends are compared then lower height building should be picked first
-      // if one start and end is compared then start should appear before end
-      if (this.x != o.x) {
-        return this.x - o.x;
-      } else {
-        return (this.isStart ? -this.height : this.height) - (o.isStart ? -o.height : o.height);
-      }
-    }
+  public static void main(String args[]) {
+    int[][] buildings = {{1, 3, 4}, {3, 4, 4}, {2, 6, 2}, {8, 11, 4}, {7, 9, 3}, {10, 11, 2}};
+    SkylineDrawing sd = new SkylineDrawing();
+    List<int[]> criticalPoints = sd.getSkyline(buildings);
+    criticalPoints.forEach(cp -> System.out.println(cp[0] + " " + cp[1]));
   }
 
   public List<int[]> getSkyline(int[][] buildings) {
@@ -99,10 +88,24 @@ public class SkylineDrawing {
     return result;
   }
 
-  public static void main(String args[]) {
-    int[][] buildings = {{1, 3, 4}, {3, 4, 4}, {2, 6, 2}, {8, 11, 4}, {7, 9, 3}, {10, 11, 2}};
-    SkylineDrawing sd = new SkylineDrawing();
-    List<int[]> criticalPoints = sd.getSkyline(buildings);
-    criticalPoints.forEach(cp -> System.out.println(cp[0] + " " + cp[1]));
+  /** Represents either start or end of building */
+  static class BuildingPoint implements Comparable<BuildingPoint> {
+    int x;
+    boolean isStart;
+    int height;
+
+    @Override
+    public int compareTo(BuildingPoint o) {
+      // first compare by x.
+      // If they are same then use this logic
+      // if two starts are compared then higher height building should be picked first
+      // if two ends are compared then lower height building should be picked first
+      // if one start and end is compared then start should appear before end
+      if (this.x != o.x) {
+        return this.x - o.x;
+      } else {
+        return (this.isStart ? -this.height : this.height) - (o.isStart ? -o.height : o.height);
+      }
+    }
   }
 }
