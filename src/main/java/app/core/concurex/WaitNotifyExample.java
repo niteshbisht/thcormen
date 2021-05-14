@@ -27,6 +27,7 @@ class Sender implements Runnable {
   private Data data;
 
   public void run() {
+
     String packets[] = {"First packet", "Second packet", "Third packet", "Fourth packet", "End"};
 
     for (String packet : packets) {
