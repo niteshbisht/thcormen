@@ -1,6 +1,7 @@
 package app.algo.arrays;
 
 import lombok.extern.slf4j.Slf4j;
+import lombok.var;
 
 @Slf4j
 public class MaxConsecutiveOnesII {
