@@ -14,6 +14,6 @@ public class BubbleSort {
         }
       }
     }
-    // log.info("Array After Sort {}", arr);
+    log.info("Array After Sort {}", arr);
   }
 }

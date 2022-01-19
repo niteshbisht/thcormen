@@ -51,6 +51,6 @@ public class ClimbStairs {
   }
 
   public static void main(String[] args) {
-    System.out.println(climbStairsFibn(6));
+    log.info("Added logging {}",climbStairsFibn(6));
   }
 }

@@ -54,10 +54,10 @@ public class StringToInteger {
   }
 
   static void processUsingStateMachine(String num) {
-    StateMachineCompute sm = new StateMachineCompute();
-    for (char c: num.toCharArray()) {
+    // StateMachineCompute sm = new StateMachineCompute();
+    // for (char c: num.toCharArray()) {
 
-    }
+    // }
   }
 
   public static int myAtoi(String s) {

@@ -6,6 +6,7 @@ import lombok.extern.slf4j.Slf4j;
 public class QuickSort {
 
   public void quickSort(int[] arr, int p, int r) {
+    log.info("Quicksort {}", arr);
     if (p < r) {
       int q = partition(arr, p, r);
       quickSort(arr, p, q - 1);
