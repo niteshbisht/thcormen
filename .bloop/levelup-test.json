@@ -1,0 +1,134 @@
+{
+    "version": "1.4.0",
+    "project": {
+        "name": "levelup-test",
+        "directory": "D:\\codebase\\thcormen\\levelup",
+        "workspaceDir": "D:\\codebase\\thcormen",
+        "sources": [
+            "D:\\codebase\\thcormen\\levelup\\src\\test\\java"
+        ],
+        "dependencies": [
+            "levelup"
+        ],
+        "classpath": [
+            "D:\\codebase\\thcormen\\.bloop\\levelup\\build\\classes",
+            "D:\\codebase\\thcormen\\levelup\\src\\main\\resources",
+            "C:\\Users\\nites\\.gradle\\caches\\modules-2\\files-2.1\\org.projectlombok\\lombok\\1.18.22\\9c08ea24c6eb714e2d6170e8122c069a0ba9aacf\\lombok-1.18.22.jar"
+        ],
+        "out": "D:\\codebase\\thcormen\\.bloop\\levelup-test\\build",
+        "classesDir": "D:\\codebase\\thcormen\\.bloop\\levelup-test\\build\\classes",
+        "resources": [
+            "D:\\codebase\\thcormen\\levelup\\src\\test\\resources"
+        ],
+        "java": {
+            "options": [
+                "-source",
+                "1.8",
+                "-target",
+                "1.8",
+                "-h",
+                "D:\\codebase\\thcormen\\levelup\\build\\generated\\sources\\headers\\java\\test",
+                "-g",
+                "-sourcepath",
+                "",
+                "-proc:none",
+                "-XDuseUnsharedTable=true"
+            ]
+        },
+        "test": {
+            "frameworks": [
+                {
+                    "names": [
+                        "com.novocode.junit.JUnitFramework"
+                    ]
+                },
+                {
+                    "names": [
+                        "org.scalatest.tools.Framework",
+                        "org.scalatest.tools.ScalaTestFramework"
+                    ]
+                },
+                {
+                    "names": [
+                        "org.scalacheck.ScalaCheckFramework"
+                    ]
+                },
+                {
+                    "names": [
+                        "org.specs.runner.SpecsFramework",
+                        "org.specs2.runner.Specs2Framework",
+                        "org.specs2.runner.SpecsFramework"
+                    ]
+                },
+                {
+                    "names": [
+                        "utest.runner.Framework"
+                    ]
+                },
+                {
+                    "names": [
+                        "munit.Framework"
+                    ]
+                }
+            ],
+            "options": {
+                "excludes": [
+                    
+                ],
+                "arguments": [
+                    {
+                        "args": [
+                            "-v",
+                            "-a"
+                        ],
+                        "framework": {
+                            "names": [
+                                "com.novocode.junit.JUnitFramework"
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        "platform": {
+            "name": "jvm",
+            "config": {
+                "home": "C:\\Users\\nites\\.jdks\\azul-1.8.0_312",
+                "options": [
+                    
+                ]
+            },
+            "mainClass": [
+                
+            ],
+            "classpath": [
+                "D:\\codebase\\thcormen\\.bloop\\levelup\\build\\classes",
+                "D:\\codebase\\thcormen\\levelup\\src\\main\\resources",
+                "C:\\Users\\nites\\.gradle\\caches\\modules-2\\files-2.1\\org.projectlombok\\lombok\\1.18.22\\9c08ea24c6eb714e2d6170e8122c069a0ba9aacf\\lombok-1.18.22.jar"
+            ]
+        },
+        "resolution": {
+            "modules": [
+                {
+                    "organization": "org.projectlombok",
+                    "name": "lombok",
+                    "version": "1.18.22",
+                    "artifacts": [
+                        {
+                            "name": "lombok",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\nites\\.gradle\\caches\\modules-2\\files-2.1\\org.projectlombok\\lombok\\1.18.22\\764fbcf20fe348c23338b3f8a7373c9e7d206956\\lombok-1.18.22-sources.jar"
+                        },
+                        {
+                            "name": "lombok",
+                            "path": "C:\\Users\\nites\\.gradle\\caches\\modules-2\\files-2.1\\org.projectlombok\\lombok\\1.18.22\\9c08ea24c6eb714e2d6170e8122c069a0ba9aacf\\lombok-1.18.22.jar"
+                        }
+                    ]
+                }
+            ]
+        },
+        "tags": [
+            "test"
+        ]
+    }
+}

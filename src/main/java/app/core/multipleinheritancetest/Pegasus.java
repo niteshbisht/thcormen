@@ -26,7 +26,7 @@ interface EggLayer extends Animal {
     return "I am able to lay eggs.";
   }
 }
-interface FireBreather extends EggLayer,Animal{ }
+interface FireBreather extends EggLayer{ }
 
 public class Pegasus implements  FireBreather {
   public static void main(String... args) {

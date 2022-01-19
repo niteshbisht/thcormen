@@ -1,6 +1,5 @@
 package app.algo.easy;
 
-import app.algo.util.AlgoUtils;
 import app.algo.util.TreeNode;
 
 import java.util.LinkedList;
@@ -8,7 +7,7 @@ import java.util.Queue;
 
 public class InvertBinaryTree {
   public static void main(String[] args) {
-    TreeNode treeNode = AlgoUtils.createTree();
+    // TreeNode treeNode = AlgoUtils.createTree();
   }
 
   public TreeNode invertTree(TreeNode root) {

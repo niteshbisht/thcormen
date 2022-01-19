@@ -1,6 +1,5 @@
 package app.core.innerclasses;
 import java.lang.reflect.*;
-import java.util.function.*;
 import static java.lang.System.out;
 
 public class MethodParameterSpy {
@@ -9,21 +8,21 @@ public class MethodParameterSpy {
   // for the morbidly curious
   <E extends RuntimeException> void genericThrow() throws E {}
 
-  public static void printClassConstructors(Class c) {
-    Constructor[] allConstructors = c.getConstructors();
+  public static void printClassConstructors(Class<?> c) {
+    Constructor<?>[] allConstructors = c.getConstructors();
     out.format(fmt, "Number of constructors", allConstructors.length);
-    for (Constructor currentConstructor : allConstructors) {
+    for (Constructor<?> currentConstructor : allConstructors) {
       printConstructor(currentConstructor);
     }
-    Constructor[] allDeclConst = c.getDeclaredConstructors();
+    Constructor<?>[] allDeclConst = c.getDeclaredConstructors();
     out.format(fmt, "Number of declared constructors",
         allDeclConst.length);
-    for (Constructor currentDeclConst : allDeclConst) {
+    for (Constructor<?> currentDeclConst : allDeclConst) {
       printConstructor(currentDeclConst);
     }
   }
 
-  public static void printClassMethods(Class c) {
+  public static void printClassMethods(Class<?> c) {
     Method[] allMethods = c.getDeclaredMethods();
     out.format(fmt, "Number of methods", allMethods.length);
     for (Method m : allMethods) {
@@ -31,7 +30,7 @@ public class MethodParameterSpy {
     }
   }
 
-  public static void printConstructor(Constructor c) {
+  public static void printConstructor(Constructor<?> c) {
     out.format("%s%n", c.toGenericString());
     Parameter[] params = c.getParameters();
     out.format(fmt, "Number of parameters", params.length);

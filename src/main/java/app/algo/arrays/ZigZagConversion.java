@@ -1,35 +1,29 @@
 package app.algo.arrays;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ZigZagConversion {
 
   public static String convert(String s, int numRows) {
-    // char[][] ar = new char[numRows][numRows];
-    // int row = 0, col = 0;
-    int pos = 1, step = 1;
-    Map<Integer, StringBuilder> stringBuilderMap = new HashMap<>();
-    for (int i = 0; i < s.length(); i++) {
-      char c = s.charAt(i);
-      if (!stringBuilderMap.containsKey(pos)) {
-        stringBuilderMap.put(pos, new StringBuilder(c));
-      } else {
-        stringBuilderMap.get(pos).append(c);
-      }
-      pos = pos + step;
-      if (pos == 1 || pos == numRows) {
-        step = step * -1;
-      }
-    }
-    String res = "";
+    if (numRows == 1) return s;
 
-    for (int i = 0; i < numRows + 1; i++) {
-      if(null!=stringBuilderMap.get(i)) {
-        res = res.concat(stringBuilderMap.get(i).toString());
-      }
+    List<StringBuilder> rows = new ArrayList<>();
+    for (int i = 0; i < Math.min(numRows, s.length()); i++)
+      rows.add(new StringBuilder());
+
+    int curRow = 0;
+    boolean goingDown = false;
+
+    for (char c : s.toCharArray()) {
+      rows.get(curRow).append(c);
+      if (curRow == 0 || curRow == numRows - 1) goingDown = !goingDown;
+      curRow += goingDown ? 1 : -1;
     }
-    return res;
+
+    StringBuilder ret = new StringBuilder();
+    for (StringBuilder row : rows) ret.append(row);
+    return ret.toString();
   }
 
   public static void main(String[] args) {

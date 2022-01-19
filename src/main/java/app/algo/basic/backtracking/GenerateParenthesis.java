@@ -12,7 +12,7 @@ public class GenerateParenthesis {
   }
 
   public List<String> generateParenthesis(int n) {
-    List<String> combinations = new ArrayList();
+    List<String> combinations = new ArrayList<>();
     generateAll(new char[2 * n], 0, combinations);
     return combinations;
   }

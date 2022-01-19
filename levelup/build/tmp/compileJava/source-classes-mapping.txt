@@ -4,3 +4,5 @@ com/sep/ds/base/backtrack/GeneratePermutations.java
  com.sep.ds.base.backtrack.GeneratePermutations
 com/sep/ds/base/backtrack/GenerateCombinations.java
  com.sep.ds.base.backtrack.GenerateCombinations
+day1/StringToInteger.java
+ day1.StringToInteger

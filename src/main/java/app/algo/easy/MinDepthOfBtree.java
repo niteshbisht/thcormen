@@ -40,7 +40,7 @@ public class MinDepthOfBtree {
     if (root == null) {
       return 0;
     } else {
-      queue.add(new Pair(root, 1));
+      queue.add(new Pair<>(root, 1));
     }
 
     int current_depth = 0;
@@ -52,10 +52,10 @@ public class MinDepthOfBtree {
         break;
       }
       if (root.left != null) {
-        queue.add(new Pair(root.left, current_depth + 1));
+        queue.add(new Pair<>(root.left, current_depth + 1));
       }
       if (root.right != null) {
-        queue.add(new Pair(root.right, current_depth + 1));
+        queue.add(new Pair<>(root.right, current_depth + 1));
       }
     }
     return current_depth;

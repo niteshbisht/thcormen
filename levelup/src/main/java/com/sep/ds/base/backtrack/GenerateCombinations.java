@@ -1,8 +1,6 @@
 package com.sep.ds.base.backtrack;
 
-import java.util.ArrayList;
 import java.util.LinkedList;
-import java.util.List;
 
 public class GenerateCombinations {
     static final LinkedList<LinkedList<Integer>> res = new LinkedList<>();

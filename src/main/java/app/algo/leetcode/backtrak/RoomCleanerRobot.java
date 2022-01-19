@@ -38,7 +38,7 @@ class RoomRobot implements Robot {
 public class RoomCleanerRobot {
   // going clockwise : 0: 'up', 1: 'right', 2: 'down', 3: 'left'
   int[][] directions = {{-1, 0}, {0, 1}, {1, 0}, {0, -1}};
-  Set<Pair<Integer, Integer>> visited = new HashSet();
+  Set<Pair<Integer, Integer>> visited = new HashSet<>();
   Robot robot;
 
   public static void main(String[] args) {
@@ -64,7 +64,7 @@ public class RoomCleanerRobot {
       int newRow = row + directions[newD][0];
       int newCol = col + directions[newD][1];
 
-      if (!visited.contains(new Pair(newRow, newCol)) && robot.move()) {
+      if (!visited.contains(new Pair<>(newRow, newCol)) && robot.move()) {
         backtrack(newRow, newCol, newD);
         goBack();
       }

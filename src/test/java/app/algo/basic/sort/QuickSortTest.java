@@ -38,7 +38,6 @@ public class QuickSortTest {
     arr[2] = 1;
     arr[3] = 9;
     arr[4] = 5;
-    long start = System.nanoTime();
     quickSort.tailrecQuickSort(arr, p, arr.length - 1);
     System.out.println(Arrays.toString(arr));
     // ArrayPrinter.printArray(arr);

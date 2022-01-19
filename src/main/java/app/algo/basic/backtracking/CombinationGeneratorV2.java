@@ -15,7 +15,7 @@ public class CombinationGeneratorV2 {
     int j = 0;
     while (j < k) {
       // add current combination
-      output.add(new LinkedList(nums.subList(0, k)));
+      output.add(new LinkedList<>(nums.subList(0, k)));
       // increase first nums[j] by one
       // if nums[j] + 1 != nums[j + 1]
       j = 0;

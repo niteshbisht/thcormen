@@ -8,7 +8,7 @@ public class RemoveDupes {
   }
 
   public int removeDuplicates(int[] nums) {
-    int i = 0, j = 0, ctr = 0;
+    int i = 0, j = 0;
     for (j = 1; j < nums.length; j++) {
       if (nums[i] != nums[j]) {
         i++;

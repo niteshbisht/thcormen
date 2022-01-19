@@ -11,8 +11,6 @@ public class TestTryCatchFinally {
     } catch (Exception e) {
       System.out.println("In Exception Area");
       return 0;
-    } finally{
-      return -1;
     }
   }
 }

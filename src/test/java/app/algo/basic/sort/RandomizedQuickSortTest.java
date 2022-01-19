@@ -12,7 +12,6 @@ public class RandomizedQuickSortTest extends TestCase {
   public void tearDown() throws Exception {}
 
   public void testRandomQuickSort() {
-    int p = 0;
     int[] arr = new int[5];
     arr[0] = 2;
     arr[1] = 3;
