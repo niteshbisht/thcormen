@@ -5,6 +5,12 @@ import java.util.LinkedList;
 public class GenerateCombinations {
     static final LinkedList<LinkedList<Integer>> res = new LinkedList<>();
 
+    public static void main(String[] args) {
+        GenerateCombinations gc = new GenerateCombinations();
+        gc.solve(4, 2);
+        System.out.println(res);
+    }
+
     void solve(int n, int k) {
         LinkedList<Integer> trackList = new LinkedList<>();
         backTrack(n, k, 1, trackList);
@@ -20,11 +26,5 @@ public class GenerateCombinations {
             backTrack(n, k, i + 1, new LinkedList<>(track));
             track.removeLast();
         }
-    }
-
-    public static void main(String[] args) {
-        GenerateCombinations gc = new GenerateCombinations();
-        gc.solve(4, 2);
-        System.out.println(res);
     }
 }

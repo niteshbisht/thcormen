@@ -1,7 +1,5 @@
 package io.nitesh.arrays
 
-import scala.util.control.Breaks.break
-
 
 class LongestCommonPrefixSolve {
   /**

@@ -9,8 +9,8 @@ version = '1.0-SNAPSHOT'
 group = 'app.algo'
 
 compileJava {
-    sourceCompatibility = '1.8'
-    targetCompatibility = '1.8'
+    sourceCompatibility = '15'
+    targetCompatibility = '15'
 }
 
 repositories {

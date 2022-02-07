@@ -6,6 +6,11 @@ public class ScootersFuel {
     static int cap = 10;
     int res = 0;
 
+    public static void main(String[] args) {
+        ScootersFuel sf = new ScootersFuel();
+        sf.solve(new int[]{7, 4, 14}, 23);
+    }
+
     int solve(int[] scooters, int finish) {
         backTrack(scooters, new LinkedList<>(), 0, 0, finish);
         return 0;
@@ -29,10 +34,5 @@ public class ScootersFuel {
             backTrack(scooters, scooterList, val, prevSum, finish);
             scooterList.removeLast();
         }
-    }
-
-    public static void main(String[] args) {
-        ScootersFuel sf = new ScootersFuel();
-        sf.solve(new int[]{7, 4, 14}, 23);
     }
 }

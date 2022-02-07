@@ -9,7 +9,7 @@ import lombok.experimental.FieldDefaults;
 @ToString
 @FieldDefaults(level = AccessLevel.PUBLIC)
 public class TreeNode {
-  int val;
-  TreeNode left;
-  TreeNode right;
+    int val;
+    TreeNode left;
+    TreeNode right;
 }
