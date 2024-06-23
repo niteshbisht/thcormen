@@ -16,4 +16,9 @@ public class BubbleSort {
         }
         log.info("Array After Sort {}", arr);
     }
+
+    public static void main(String[] args) {
+        var bs = new BubbleSort();
+        bs.sort(new int[] {2,1,3,4,9,0,11});
+    }
 }
