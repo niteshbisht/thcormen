@@ -1,5 +1,8 @@
 package app.algo.basic.sort;
 
+//import lombok.extern.slf4j.Slf4j;
+
+
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
@@ -11,15 +14,6 @@ public class QuickSort {
             int q = partition(arr, p, r);
             quickSort(arr, p, q - 1);
             quickSort(arr, q + 1, r);
-        }
-    }
-
-    public void quickSortHoares(int[] arr, int p, int r) {
-        if (p < r) {
-            int pivot = (p + r) / 2;
-            int index = hoaresPartition(arr, p, r, pivot);
-            quickSortHoares(arr, p, index - 1);
-            quickSortHoares(arr, index, r);
         }
     }
 
@@ -36,6 +30,15 @@ public class QuickSort {
         }
         exchange(arr, i + 1, r);
         return i + 1;
+    }
+
+    public void quickSortHoares(int[] arr, int p, int r) {
+        if (p < r) {
+            int pivot = (p + r) / 2;
+            int index = hoaresPartition(arr, p, r, pivot);
+            quickSortHoares(arr, p, index - 1);
+            quickSortHoares(arr, index, r);
+        }
     }
 
     int hoaresPartition(int[] arr, int left, int right, int pivot) {

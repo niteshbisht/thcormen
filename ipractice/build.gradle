@@ -1,0 +1,12 @@
+plugins {
+    id 'java'
+}
+
+dependencies {
+    testImplementation 'junit:junit:4.13.2',
+            'org.projectlombok:lombok:1.18.30',
+            'org.mockito:mockito-core:4.3.1',
+            'org.assertj:assertj-core:3.22.0',
+            'commons-io:commons-io:2.11.0',
+            'org.jbehave:jbehave-core:4.8.3'
+}
