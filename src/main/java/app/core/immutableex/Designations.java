@@ -7,6 +7,6 @@ import lombok.experimental.FieldDefaults;
 @Data
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class Designations {
-    String title;
-    int duration;
+  String title;
+  int duration;
 }
